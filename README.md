@@ -112,4 +112,4 @@ Result: Commands disabled for all users in the HR & IT OU**
 ## Author
 
 **Oyedele Oyepeju**  
-Cybersecurity Analyst  
+Cyber Security Analyst  
