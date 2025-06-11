@@ -93,10 +93,10 @@ Result: Commands disabled for all users in the HR & IT OU**
 
 ## Screenshots
 
-- AD Domain Structure
-- GPO Editor Screenshot
-- PC joined to domain
-- Result of denied USB access
+- [AD Domain Structure](https://github.com/Oyeoyepeju/Active-Directory-Simulation-for-Cybertech-Solution-/blob/main/Screenshot/active_directory_group_user.png)
+- [GPO](https://github.com/Oyeoyepeju/Active-Directory-Simulation-for-Cybertech-Solution-/blob/main/Screenshot/windows_manchine_connection.png)
+- (https://github.com/Oyeoyepeju/Active-Directory-Simulation-for-Cybertech-Solution-/blob/main/Screenshot/windows_manchine_connection.png)
+- (https://github.com/Oyeoyepeju/Active-Directory-Simulation-for-Cybertech-Solution-/blob/main/Screenshot/Group_policy_management.png)
 
 ---
 
