@@ -11,7 +11,7 @@ This project is the deployment of a Windows Server Domain Controller (Active Dir
 
 - 1 x Windows Server (AD Domain Controller)
 - 1 x Windows 8 Client PC (Account Department)
-- 1 x Windows 7 Client PC (Legacy Software)
+- 1 x Windows 8.1 Client PC (Legacy Software)
 
 ---
 
@@ -35,12 +35,12 @@ Router (Gateway: 10.0.5.1)
 Switch
  ┌──────┬─────────────┬──────────────┐
  │      │             │              │
-Server  PC1 (Win 8)   PC2 (Win XP)
+Server  PC1 (Win 8)   PC2 (Win 8.1)
 ```
 
 | Device        | IP Address      | Role                        |
 |---------------|----------------|-----------------------------|
-| Windows Server| 10.0.5.5  | AD Domain Controller (DC)   |
+| Windows Server| 10.0.5.4  | AD Domain Controller (DC)   |
 | Windows 8 PC  | DHCP    | Client (Accounts)           |
 | Windows XP PC | DHCP    | Legacy Client               |
 
@@ -50,7 +50,7 @@ Server  PC1 (Win 8)   PC2 (Win XP)
 
 - **Domain Name**: `cybertech.local`
 - **Server Name**: `CYBERTECH`
-- **Static IP**: `10.0.5.5`
+- **Static IP**: `10.0.5.4`
 - **AD Roles Installed**: AD DS, DNS (DHCP)
 
 ---
@@ -62,11 +62,12 @@ Created using **Active Directory Users and Computers**:
 ```
 CyberTech.local
 ├── OU: IT Department
-│   └── Users: Alex.IT
-    └── Users: Charles.IT
+│   └── Users: Dominique
+    └── Users: Dominique.IT
 
-├── OU: Sales
-│   └── Users:
+├── OU: HR
+│   └── Users:CARL
+|       User:Carl.HR
 ```
 
 ---
@@ -82,8 +83,13 @@ Created and linked using **Group Policy Management Console (gpmc.msc)**:
   - Set **"All Removable Storage classes: Deny all access"** to **Enabled**
 
 Result: USB and external drives are disabled for all users in the **Accounts OU**.
+- **GPO Name**: `DisableRemovableDrives`
+- **Linked to**: OU: HR Department
+- **Policy Configured**:
+  - `Computer Configuration` > `Administrative Templates` > `System` > `Removable Storage Access`
+  - Set **"Remove and prevent access to shutdown ,Sleep and restart and hibernate command
 
----
+Result: Commands disabled for all users in the HR & IT OU**
 
 ## Screenshots
 
@@ -105,5 +111,5 @@ Result: USB and external drives are disabled for all users in the **Accounts OU*
 
 ## Author
 
-**Aliu B. Sanusi**  
+**Oyedele Oyepeju**  
 Cybersecurity Analyst  
